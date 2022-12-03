@@ -1,0 +1,178 @@
+
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<body>
+
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+      </div>
+
+
+<style>
+
+
+/* Preloader */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(https://myfiles.space/user_files/130929_29e0521b3284d677/130929_custom_files/tenor.gif?6961);
+  /* path to your loading animation */
+  background-attachment: fixed;
+  background-size: cover;
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
+}
+
+body {
+  overflow: hidden;
+}
+</style>
+
+
+<script>
+
+$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(35).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $('body').delay(35).css({'overflow':'visible'});
+})
+
+
+
+</script>
+
+
+
+<div class="center">
+	 
+    <div class="progress">
+    <p>HTML5</p>
+        <progress id="html5" max="100" value="100" class="loa"></progress>
+        <span></span>
+    </div>
+    
+    
+    <div class="progress">
+    <p>Node.js</p>
+        <progress id="nodejs" max="100" value="36"></progress>
+        <span></span>
+    </div>
+  <script src="/animateprogress.js"></script>      
+    <input type="button" id="boton" value="Reload" />
+</div>
+<button type="button" class="btn btn-primary btn-lg" id="load2" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing Order">Submit Order</button>
+    <script>
+$('.btn').on('click', function() {
+    var $this = $(this);
+  $this.button('loading');
+    setTimeout(function() {
+       $this.button('reset');
+   }, 8000);
+});
+
+
+    </script>
+    
+    
+    <script type="text/javascript"> 
+
+
+        window.onload = function() { 
+            
+            animateprogress("#html5",100);
+          
+  animateprogress("#nodejs",36);
+            
+        } 	
+        document.querySelector ("#boton").addEventListener ("click", function() { 
+            animateprogress("#html5",91);
+            animateprogress("#nodejs",36);
+       
+        });
+
+        function animateprogress (id, val){    
+ 
+ 
+ var getRequestAnimationFrame = function () {  /* <------- Declaro getRequestAnimationFrame intentando obtener la máxima compatibilidad con todos los navegadores */
+     return window.requestAnimationFrame ||
+     window.webkitRequestAnimationFrame ||  
+     window.mozRequestAnimationFrame ||
+     window.oRequestAnimationFrame ||
+     window.msRequestAnimationFrame ||
+     function ( callback ){
+         window.setTimeout(enroute, 1 / 60 * 1000);
+     };
+      
+ };
+  
+ var fpAnimationFrame = getRequestAnimationFrame();   /* <--- Declaro una instancia de getRequestAnimationFrame para llamar a la función animación */
+ var i = 0;
+ var animacion = function () {
+          
+ if (i<=val)
+     {
+         document.querySelector(id).setAttribute("value",i);      /* <----  Incremento el valor de la barra de progreso */
+         document.querySelector(id+"+ span").innerHTML = i+"%";     /* <---- Incremento el porcentaje y lo muestro en la etiqueta span */
+         i++;
+         fpAnimationFrame(animacion);          /* <------------------ Mientras que el contador no llega al porcentaje fijado la función vuelve a llamarse con fpAnimationFrame     */
+     }
+                                      
+ }
+
+     fpAnimationFrame(animacion);   /*  <---- Llamo la función animación por primera vez usando fpAnimationFrame para que se ejecute a 60fps  */
+              
+}
+        
+    </script>
+    <style>
+progress[value] {
+    /* Elimino la apariencia por defecto */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+     
+    /* Quito el borde que aparece en Firefox */
+    border: none;
+ 
+    /* Añado mis propios estilos */
+    width: 270px;
+    height: 30px;
+    overflow:hidden;
+     
+/*  Estos estilos solo se aplicaran al fondo de la barra en mozilla */
+        border:1px inset rgba(214, 28, 28, 0.185);
+    background-color:#e9a20a;
+    border-radius : 20px ;
+}
+
+
+    </style>
+
+    <script>           
+        </script>
+
+
+
+
+        </body></html>
