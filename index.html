@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" type="text/css" href="/storage/emulated/0/llllllllllllllllllllllll /comentarios /loader.css" />
+  
+  <title>loader</title>
+  <link rel="icon" 
+      type="image/png" 
+      href="https://myfiles.space/user_files/138486_ec4ebb6e679aa72f/138486_custom_files/11246264_844889458936818_2869795216957848912_n.png?1521" />
+</head>
+<body>
+  <div id="preloader">
+        <div id="status">&nbsp;</div>
+      </div>
+  
+  <style>
+  
+  .conten video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  object-position: center;
+}
+  
+  #background-video {
+   100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity:0.90;
+}
+html{
+  
+  
+  
+  
+}
+video{
+  opacity:100.1;
+}
+body{
+
+  
+  
+  
+}
+
+h1{
+  color:black;
+}
+
+.conten{
+  
+   
+   background: rgb(210,189,224);
+background: linear-gradient(90deg, rgba(210,189,224,1) 0%, rgba(253,234,29,1) 50%, rgba(224,144,30,1) 100%); opacity:9.0;
+  
+  border-radius: 30px;
+  
+  align-items: center;
+  flex-direction: row;
+  object-fit: cover;
+  height:510px;
+  width: 500px;
+  z-index: 99px;
+  
+  position: absolute;
+  left: 30%;
+  /* centers the loading animation horizontally one the screen */
+  top: 9%;
+  
+  /* centers the loading animation vertically one the screen */
+   /* path to your loading animation */
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  /* is width and height divided by two */  /* is width and height divided by two */
+}
+
+.img{
+ /* background-image: url("https://myfiles.space/user_files/127601_e31c146deadb8975/127601_custom_files/11246264_844889458936818_2869795216957848912_n.png?2749"); */
+  border-radius:70px;
+  -webkit-box-shadow: 81px 23px 78px -39px rgba(0,0,0,0.86);
+-moz-box-shadow: 81px 23px 78px -39px rgba(0,0,0,0.86);
+box-shadow: 81px 23px 78px -39px rgba(0,0,0,0.86);
+}
+
+
+}
+#texto {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 2em;
+
+    width: 12.5em;
+    height: 100%;
+
+    text-align: center;
+
+    color: #eb7260;
+
+    mix-blend-mode: multiply;
+}
+
+#texto:after {
+    content: '0%';
+    -webkit-animation: porcentaje 5s linear infinite;
+            animation: porcentaje 5s linear infinite;
+  }
+}
+  conten.mi{
+    position:absolute;
+    background:transparent;
+    
+  }
+  .button{
+    
+   width: 90px;
+    height: 30px;
+   border-radius:50px;
+   background: rgb(217,210,221);
+background: -moz-linear-gradient(90deg, rgba(217,210,221,1) 0%, rgba(246,233,17,0.028846153846153855) 50%, rgba(252,176,69,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(217,210,221,1) 0%, rgba(246,233,17,0.028846153846153855) 50%, rgba(252,176,69,1) 100%);
+background: linear-gradient(90deg, rgba(217,210,221,1) 0%, rgba(246,233,17,0.028846153846153855) 50%, rgba(252,176,69,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d9d2dd",endColorstr="#fcb045",GradientType=1);
+    font-size:20px;
+    position:relative;
+    border-style:black 50px solid;
+    font-family:'fantasy';
+    font-weight: bolder;
+  }
+  
+  </style>
+ <center> <div class="conten"> <video id="background-video" autoplay loop muted poster="https://user-images.githubusercontent.com/106701602/205491215-945d9d76-644e-443c-9114-d7e0352a009e.mp4
+">
+  <source src="https://user-images.githubusercontent.com/106701602/205491215-945d9d76-644e-443c-9114-d7e0352a009e.mp4
+" type="video/mp4">
+</video>
+   <div class="mi"><img src="https://user-images.githubusercontent.com/106701602/221359533-1ee3810d-89d7-44e7-ba56-e366827f4aa5.png"></img></div>
+   
+     <img src="https://user-images.githubusercontent.com/106701602/221359587-61c8d900-a9cc-4c7a-9fa8-58510e4006df.png" class="img">
+   </img> 
+     <h3 style="text-align: center;">
+  Cargando...
+</h3>
+
+   <div class="barra">
+     <div class="progress"></div>
+   </div>
+    
+   <button class="button" >
+     iniciar
+   </button>  
+    </div>
+   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <script>
+  
+  setInterval(function() {
+  let barra = document.getElementsByClassName("progress")[0];
+  let fondo = document.getElementsByClassName("barra")[0];
+  barra.style.width = barra.clientWidth + 1 + "px";
+  if(barra.clientWidth >= fondo.clientWidth) {
+    barra.style.width = 1 + "px";
+  }
+}, 30);
+
+  
+  </script>
+  
+  <style>
+  .barra {
+  
+  height: 20px;
+  width: 30%;
+  background: gray;
+  border-radius: 50px;
+  overflow: hidden;
+  bottom:1600;
+  }
+
+.progress {
+  display: block;
+  width: 50%;
+  height: 100%;
+  border-radius: 50px;
+  float: left;
+/*   background: red; */
+  background-image:
+    linear-gradient(
+      -45deg,
+      yellow 25%,
+      black 25%,
+      black 50%,
+      yellow 50%,
+      yellow 75%,
+      black 75%,
+      black
+    )
+  ;
+  background-size: 50px 50px;
+  animation: load 1s infinite linear;
+}
+
+@keyframes load {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+  
+  </style>
+  
+
+<style>
+
+
+/* Preloader */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+#status {width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(https://myfiles.space/user_files/130929_29e0521b3284d677/130929_custom_files/tenor.gif?6961);
+  /* path to your loading animation */
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
+  border-radius:40px;
+}
+body {
+  overflow: hidden;
+}
+</style>
+
+
+<script>
+
+$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(35).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $('body').delay(35).css({'overflow':'visible'});
+})
+
+
+
+</script>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+  <!--
+    
+    <div class="progress">
+      
+    <p>HTML5</p>
+      <progress id="html5" max="100" value="100" class=""></progress>
+        <span></span></center><div class="center">
+	 
+    <p>Node.js</p>
+        <progress id="nodejs" max="100" value="10"></progress>
+        <span></span>
+    </div>
+  <script src="/animateprogress.js"></script>      
+    <input type="button" id="boton" value="Reload" />
+</div>
+<button type="button" class="btn btn-primary btn-lg" id="load2" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing Order">Submit Order</button>
+    <script>
+$('.btn').on('click', function() {
+    var $this = $(this);
+  $this.button('loading');
+    setTimeout(function() {
+       $this.button('reset');
+   }, 8000);
+});
+
+
+    </script>
+    
+    
+    <script type="text/javascript"> 
+
+
+        window.onload = function() { 
+            
+            animateprogress("#html5",100);
+          
+  animateprogress("#nodejs",36);
+            
+        } 	
+        document.querySelector ("#boton").addEventListener ("click", function() { 
+            animateprogress("#html5",91);
+            animateprogress("#nodejs",36);
+       
+        });
+
+        function animateprogress (id, val){    
+ 
+ 
+ var getRequestAnimationFrame = function () {  /* <------- Declaro getRequestAnimationFrame intentando obtener la máxima compatibilidad con todos los navegadores */
+     return window.requestAnimationFrame ||
+     window.webkitRequestAnimationFrame ||  
+     window.mozRequestAnimationFrame ||
+     window.oRequestAnimationFrame ||
+     window.msRequestAnimationFrame ||
+     function ( callback ){
+         window.setTimeout(enroute, 1 / 60 * 1000);
+     };
+      
+ };
+  
+ var fpAnimationFrame = getRequestAnimationFrame();   /* <--- Declaro una instancia de getRequestAnimationFrame para llamar a la función animación */
+ var i = 0;
+ var animacion = function () {
+          
+ if (i<=val)
+     {
+         document.querySelector(id).setAttribute("value",i);      /* <----  Incremento el valor de la barra de progreso */
+         document.querySelector(id+"+ span").innerHTML = i+"%";     /* <---- Incremento el porcentaje y lo muestro en la etiqueta span */
+         i++;
+         fpAnimationFrame(animacion);          /* <------------------ Mientras que el contador no llega al porcentaje fijado la función vuelve a llamarse con fpAnimationFrame     */
+     }
+                                      
+ }
+
+     fpAnimationFrame(animacion);   /*  <---- Llamo la función animación por primera vez usando fpAnimationFrame para que se ejecute a 60fps  */
+              
+}
+        
+    </script>
+    <style>
+progress[value] {
+    /
+     
+    /* Quito el borde que aparece en Firefox */
+    border: none;
+ 
+    /* Añado mis propios estilos */
+    width: 270px;
+    height: 30px;
+    overflow:hidden;
+     
+/*  Estos estilos solo se aplicaran al fondo de la barra en mozilla */
+        border:1px inset rgba(214, 28, 28, 0.185);
+    background-color:#e9a20a;
+    border-radius : 20px ;
+}
+
+  </style>-->
+</body>
+</html>
